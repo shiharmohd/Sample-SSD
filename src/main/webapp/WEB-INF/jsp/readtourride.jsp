@@ -17,11 +17,11 @@
             <th>Tour End Date</th>
             <th>Tour Leader</th>
         </tr>
-        <c:forEach var="contact" items="${contacts}">
+        <c:forEach var="tours" items="${tourrides}">
         <tr>
-            <td>${contact.name}</td>
-            <td>${contact.email}</td>
-            <td>${contact.country}</td>
+            <td>${tours.startDate}</td>
+            <td>${tours.endDate}</td>
+            <td>${tours.tourLeader}</td>
         </tr>
         </c:forEach>
     </table>
