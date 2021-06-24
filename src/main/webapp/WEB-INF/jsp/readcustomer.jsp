@@ -26,6 +26,8 @@
             <td>${customer.email}</td>
             <td>${customer.gender}</td>
             <td>${customer.mobNumber}</td>
+            <td><a href="/update-customer/${customer.id}">Update</a></td>
+            <td><a href="/delete-customer/${customer.id}">Delete</a></td>
         </tr>
         </c:forEach>
     </table>

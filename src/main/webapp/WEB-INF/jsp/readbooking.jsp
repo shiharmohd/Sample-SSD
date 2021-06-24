@@ -24,6 +24,8 @@
                         <td>${booking.customer_id}</td>
                         <td>${booking.booking_date}</td>
                         <td>${booking.payment_referance}</td>
+                        <td><a href="/update-booking/${booking.id}">Update</a></td>
+                        <td><a href="/delete-booking/${booking.id}">Delete</a></td>
                     </tr>
                 </c:forEach>
             </table>
