@@ -49,6 +49,6 @@ public class BookingController {
     @RequestMapping(value = "/delete-booking/{id}")
     public String deleteBooking(@PathVariable int id) {
         bookingService.deleteById(id);
-        return "redirect:/read-booking";
+        return "redirect:/read-booking"; 
     }
 }
