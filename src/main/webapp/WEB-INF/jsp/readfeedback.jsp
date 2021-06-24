@@ -22,6 +22,8 @@
                         <td>${feedback.booking_id}</td>
                         <td>${feedback.description}</td>
                         <td>${feedback.rating}</td>
+                        <td><a href="/update-feedback/${feedback.id}">Update</a></td>
+                        <td><a href="/delete-feedback/${feedback.id}">Delete</a></td>
                     </tr>
                 </c:forEach>
             </table>
