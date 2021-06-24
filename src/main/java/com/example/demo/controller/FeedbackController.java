@@ -49,6 +49,6 @@ public class FeedbackController {
     @RequestMapping(value = "/delete-feedback/{id}")
     public String deleteFeedback(@PathVariable int id) {
         feedbackService.deleteById(id);
-        return "redirect:/read-feedback"; 
+        return "redirect:/read-feedback";  
     }
 }
