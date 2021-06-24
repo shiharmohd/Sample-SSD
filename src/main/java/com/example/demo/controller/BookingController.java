@@ -24,7 +24,7 @@ public class BookingController {
     @RequestMapping("/create-booking")
     public String showBookingCreatePage(Model model) {
         model.addAttribute("command", new Booking());
-        return "createbooking";
+        return "createbooking"; 
     }
 
     @RequestMapping(value = "/create-customer", method = RequestMethod.POST)
