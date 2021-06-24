@@ -37,7 +37,7 @@ public class BookingController {
     public String showUpdateBookingPage(@PathVariable int id, Model model) {
         model.addAttribute("id", id);
         model.addAttribute("command", bookingService.findById(id).orElse(null));
-        return "updatebooking";
+        return "updatebooking"; 
     }
 
     @RequestMapping(value = "/update-booking/{id}", method = RequestMethod.POST)
