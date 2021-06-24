@@ -16,10 +16,10 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @RequestMapping("/read-customers")
+    @RequestMapping("/read-customer")
     public String showReadTourRidePage(Model model) {
         model.addAttribute("customers", customerService.findAll());
-        return "readcustomers";
+        return "readcustomer";
     }
 
     @RequestMapping("/create-customer")
@@ -31,7 +31,7 @@ public class CustomerController {
     @RequestMapping(value = "/create-customer", method = RequestMethod.POST)
     public String createTourRide(@ModelAttribute("customer") Customer customer) {
         customerService.saveCustomer(customer);
-        return "redirect:/read-customers";
+        return "redirect:/read-customer";
     }
 
     @RequestMapping(value = "/update-customer/{id}")
@@ -44,12 +44,12 @@ public class CustomerController {
     @RequestMapping(value = "/update-customer/{id}", method = RequestMethod.POST)
     public String updateCustomer(@PathVariable int id, @ModelAttribute("customer") Customer customer) {
         customerService.updateCustomer(id, customer);
-        return "redirect:/read-customers";
+        return "redirect:/read-customer";
     }
 
     @RequestMapping(value = "/delete-customer/{id}")
     public String deleteCustomer(@PathVariable int id) {
         customerService.deleteById(id);
-        return "redirect:/read-customers";
+        return "redirect:/read-customer";
     }
 }
