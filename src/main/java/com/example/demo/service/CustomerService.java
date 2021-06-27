@@ -28,7 +28,7 @@ public class CustomerService {
 
     public Customer updateCustomer(int id, Customer customer) {
         Customer updatedTourRide = customerRepository.findById(id).orElse(null);
-        // updatedTourRide.setName(tourRide.getName());
+        updatedTourRide.setName(customer.getName());
         // updatedTourRide.setEmail(tourRide.getEmail());
         // updatedTourRide.setCountry(tourRide.getCountry());
         return customerRepository.save(updatedTourRide);

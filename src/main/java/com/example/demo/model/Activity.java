@@ -14,20 +14,37 @@ import javax.persistence.Id;
 @Setter
 @Getter
 @Entity
+public class Activity {
 
-public class TourRide {
-    
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column
-    private String tourLeader;
+    private int package_id;
 
     @Column
-    private Date startDate;
+    private String name;
 
     @Column
-    private Date endDate;
+    private String description;
+
+    @Column
+    private int type;
+
+    @Column
+    private Date activity_date;
+
+    @Column
+    private String optional;
+
+    @Column
+    private double price;
+
+    @Column
+    private String notes;
+
+    @Column
+    private String location;
 }
