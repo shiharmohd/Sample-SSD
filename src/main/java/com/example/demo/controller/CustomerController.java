@@ -17,28 +17,28 @@ public class CustomerController {
     private CustomerService customerService;
 
     @RequestMapping("/read-customer")
-    public String showReadTourRidePage(Model model) {
+    public String showReadCustomerPage(Model model) {
         model.addAttribute("customers", customerService.findAll());
         return "readcustomer";
     }
 
     @RequestMapping("/create-customer")
-    public String showTourRideContactPage(Model model) {
+    public String showCustomerCreatePage(Model model) {
         model.addAttribute("command", new Customer());
-        return "createtours";
+        return "createcustomer";
     }
 
     @RequestMapping(value = "/create-customer", method = RequestMethod.POST)
-    public String createTourRide(@ModelAttribute("customer") Customer customer) {
+    public String createCustomer(@ModelAttribute("customer") Customer customer) {
         customerService.saveCustomer(customer);
         return "redirect:/read-customer";
     }
 
     @RequestMapping(value = "/update-customer/{id}")
-    public String showUpdateTourRidePage(@PathVariable int id, Model model) {
+    public String showUpdateCustomerPage(@PathVariable int id, Model model) {
         model.addAttribute("id", id);
         model.addAttribute("command", customerService.findById(id).orElse(null));
-        return "updatecontact";
+        return "updatecustomer";
     }
 
     @RequestMapping(value = "/update-customer/{id}", method = RequestMethod.POST)

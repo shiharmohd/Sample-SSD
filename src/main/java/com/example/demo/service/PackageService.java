@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 public class PackageService {
-    
+
     @Autowired
     private PackageRepository packageRepository;
 
@@ -28,9 +28,16 @@ public class PackageService {
 
     public Package updatePackage(int id, Package package1) {
         Package updatedPackage = packageRepository.findById(id).orElse(null);
-        //updatedTourRide.setName(tourRide.getName());
-        //updatedTourRide.setEmail(tourRide.getEmail());
-        //updatedTourRide.setCountry(tourRide.getCountry());
+        updatedPackage.setName(package1.getName());
+        updatedPackage.setDescription(package1.getDescription());
+        updatedPackage.setPrice(package1.getPrice());
+        updatedPackage.setStart_date(package1.getStart_date());
+        updatedPackage.setEnd_date(package1.getEnd_date());
+        updatedPackage.setStart_location(package1.getStart_location());
+        updatedPackage.setEnd_location(package1.getEnd_location());
+        updatedPackage.setNumber_of_nights(package1.getNumber_of_nights());
+        updatedPackage.setNumber_of_days(package1.getNumber_of_days());
+        updatedPackage.setNotes(package1.getNotes());
         return packageRepository.save(updatedPackage);
     }
 

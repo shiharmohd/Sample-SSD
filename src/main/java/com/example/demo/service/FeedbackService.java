@@ -1,4 +1,5 @@
 package com.example.demo.service;
+
 import com.example.demo.model.Feedback;
 import com.example.demo.repository.FeedbackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import java.util.Optional;
 
 @Service
 public class FeedbackService {
-    
+
     @Autowired
     private FeedbackRepository feedbackRepository;
 
@@ -27,9 +28,9 @@ public class FeedbackService {
 
     public Feedback updateFeedback(int id, Feedback feedback) {
         Feedback updatedFeedback = feedbackRepository.findById(id).orElse(null);
-        // updatedTourRide.setName(tourRide.getName());
-        // updatedTourRide.setEmail(tourRide.getEmail());
-        // updatedTourRide.setCountry(tourRide.getCountry());
+        updatedFeedback.setBooking_id(feedback.getBooking_id());
+        updatedFeedback.setDescription(feedback.getDescription());
+        updatedFeedback.setRating(feedback.getRating());
         return feedbackRepository.save(updatedFeedback);
     }
 

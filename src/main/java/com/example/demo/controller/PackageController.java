@@ -22,7 +22,7 @@ public class PackageController {
     }
 
     @RequestMapping("/create-package")
-    public String showTourRidePackagePage(Model model) {
+    public String showPackageCreatePage(Model model) {
         model.addAttribute("command", new Package());
         return "createpackage";
     }

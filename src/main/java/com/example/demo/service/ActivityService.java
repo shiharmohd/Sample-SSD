@@ -1,4 +1,5 @@
 package com.example.demo.service;
+
 import com.example.demo.model.Activity;
 import com.example.demo.repository.ActivityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import java.util.Optional;
 
 @Service
 public class ActivityService {
-    
+
     @Autowired
     private ActivityRepository activityRepository;
 
@@ -27,9 +28,15 @@ public class ActivityService {
 
     public Activity updateActivity(int id, Activity activity) {
         Activity updatedActivity = activityRepository.findById(id).orElse(null);
-        //updatedActivity.setName(activity.getName());
-        //updatedTourRide.setEmail(tourRide.getEmail());
-        //updatedTourRide.setCountry(tourRide.getCountry());
+        updatedActivity.setPackage_id(activity.getPackage_id());
+        updatedActivity.setName(activity.getName());
+        updatedActivity.setDescription(activity.getDescription());
+        updatedActivity.setType(activity.getType());
+        updatedActivity.setActivity_date(activity.getActivity_date());
+        updatedActivity.setOptional(activity.getOptional());
+        updatedActivity.setPrice(activity.getPrice());
+        updatedActivity.setNotes(activity.getNotes());
+        updatedActivity.setLocation(activity.getLocation());
         return activityRepository.save(updatedActivity);
     }
 

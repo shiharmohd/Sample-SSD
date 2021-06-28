@@ -12,16 +12,15 @@ import javax.persistence.Id;
 @Setter
 @Getter
 @Entity
-
 public class Customer {
     
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer customerID;
+    private Integer id;
 
     @Column
-    private String customerName;
+    private String customer_name;
 
     @Column
     private String email;
@@ -30,5 +29,5 @@ public class Customer {
     private String gender;
 
     @Column
-    private String contactNumber;
+    private String contact_number;
 }

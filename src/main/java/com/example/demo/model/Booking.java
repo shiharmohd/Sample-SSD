@@ -31,5 +31,5 @@ public class Booking {
     private Date booking_date;
 
     @Column
-    private String payment_referance;
+    private String payment_reference;
 }

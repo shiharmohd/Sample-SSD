@@ -31,7 +31,7 @@ public class Activity {
     private String description;
 
     @Column
-    private int type;
+    private String type;
 
     @Column
     private Date activity_date;

@@ -11,7 +11,6 @@ import javax.persistence.Id;
 @Setter
 @Getter
 @Entity
-
 public class Feedback {
     
     @Id

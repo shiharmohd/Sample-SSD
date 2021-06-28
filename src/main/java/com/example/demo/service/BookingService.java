@@ -27,11 +27,12 @@ public class BookingService {
     }
 
     public Booking updateBooking(int id, Booking booking) {
-        Booking updatedTourRide = bookingRepository.findById(id).orElse(null);
-        // updatedTourRide.setName(tourRide.getName());
-        // updatedTourRide.setEmail(tourRide.getEmail());
-        // updatedTourRide.setCountry(tourRide.getCountry());
-        return bookingRepository.save(updatedTourRide);
+        Booking updatedBooking = bookingRepository.findById(id).orElse(null);
+        updatedBooking.setPackage_id(booking.getPackage_id());
+        updatedBooking.setCustomer_id(booking.getCustomer_id());
+        updatedBooking.setBooking_date(booking.getBooking_date());
+        updatedBooking.setPayment_reference(booking.getPayment_reference());
+        return bookingRepository.save(updatedBooking);
     }
 
     public void deleteById(int id) {

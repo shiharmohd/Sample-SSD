@@ -16,7 +16,7 @@ public class FeedbackController {
     private FeedbackService feedbackService;
 
     @RequestMapping("/read-feedback")
-    public String showReadBookingPage(Model model) {
+    public String showReadFeedbackPage(Model model) {
         model.addAttribute("feedbacks", feedbackService.findAll());
         return "readfeedback";
     }

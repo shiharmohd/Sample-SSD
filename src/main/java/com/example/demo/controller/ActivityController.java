@@ -22,13 +22,13 @@ public class ActivityController {
     }
 
     @RequestMapping("/create-activity")
-    public String showActivityPage(Model model) {
+    public String showActivityCreatePage(Model model) {
         model.addAttribute("command", new Activity());
         return "createactivity";
     }
 
     @RequestMapping(value = "/create-activity", method = RequestMethod.POST)
-    public String createActivity(@ModelAttribute("package") Activity activity) {
+    public String createActivity(@ModelAttribute("activity") Activity activity) {
         activityService.saveActivity(activity);
         return "redirect:/read-activity";
     }

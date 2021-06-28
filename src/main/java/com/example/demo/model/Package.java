@@ -14,7 +14,6 @@ import javax.persistence.Id;
 @Setter
 @Getter
 @Entity
-
 public class Package {
     
     @Id

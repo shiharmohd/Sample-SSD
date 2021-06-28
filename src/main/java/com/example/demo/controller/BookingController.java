@@ -27,7 +27,7 @@ public class BookingController {
         return "createbooking"; 
     }
 
-    @RequestMapping(value = "/create-customer", method = RequestMethod.POST)
+    @RequestMapping(value = "/create-booking", method = RequestMethod.POST)
     public String createBooking(@ModelAttribute("booking") Booking booking) {
         bookingService.saveBooking(booking);
         return "redirect:/read-booking";
