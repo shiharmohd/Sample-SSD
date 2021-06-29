@@ -2,11 +2,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <h1>Update Contact</h1>
-<form:form method="post" action="/update-contact/${id}">
+<form:form method="post" action="/update-customer/${id}">
     <table>
         <tr>
             <td>Customer Name: </td>
-            <td><form:input path="customerName"/></td>
+            <td><form:input path="customer_name"/></td>
         </tr>
         <tr>
             <td>Email: </td>
@@ -18,7 +18,7 @@
         </tr>
         <tr>
             <td>Contact No: </td>
-            <td><form:input path="contactNumber"/></td>
+            <td><form:input path="contact_number"/></td>
         </tr>
         <tr>
             <td></td>

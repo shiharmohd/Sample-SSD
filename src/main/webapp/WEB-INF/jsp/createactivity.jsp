@@ -2,7 +2,7 @@
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
         <h1>Create Activity</h1>
-        <form:form method="post" action="/create-activity">
+        <form:form method="post" autocomplete="off" action="/create-activity">
             <table>
                 <tr>
                     <td>Package: </td>

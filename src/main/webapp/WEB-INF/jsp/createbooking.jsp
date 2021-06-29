@@ -1,8 +1,15 @@
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+</script>
         <h1>Create Booking</h1>
-            <form:form method="post" action="/create-booking">
+            <form:form method="post" autocomplete="off" action="/create-booking">
                 <table>
                     <tr>
                         <td>Package: </td>
@@ -36,7 +43,7 @@
                     <tr>
                         <td>Booking Date: </td>
                         <td>
-                            <form:input path="booking_date" />
+                            <form:input path="booking_date" id="datepicker" />
                         </td>
                     </tr>
                     <tr>

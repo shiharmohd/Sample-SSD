@@ -2,7 +2,7 @@
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
         <h1>Create Feedback</h1>
-            <form:form method="post" action="/create-feedback">
+            <form:form method="post" autocomplete="off" action="/create-feedback">
                 <table>
                     <tr>
                         <td>Booking</td>
