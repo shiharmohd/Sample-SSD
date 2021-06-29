@@ -51,5 +51,4 @@ public class PackageController {
         packageService.deleteById(id);
         return "redirect:/read-package";
     }
-
 }

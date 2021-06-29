@@ -43,10 +43,10 @@ public class Package {
     private String end_location;
     
     @Column
-    private int number_of_nights;
+    private Integer number_of_nights;
 
     @Column
-    private int number_of_days;
+    private Integer number_of_days;
 
     @Column
     private String notes;

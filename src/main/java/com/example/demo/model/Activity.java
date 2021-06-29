@@ -22,7 +22,7 @@ public class Activity {
     private Integer id;
 
     @Column
-    private int package_id;
+    private Integer package_id;
 
     @Column
     private String name;

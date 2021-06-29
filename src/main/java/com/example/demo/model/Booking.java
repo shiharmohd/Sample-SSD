@@ -12,8 +12,6 @@ import javax.persistence.Id;
 @Setter
 @Getter
 @Entity
-
-
 public class Booking {
     
     @Id
