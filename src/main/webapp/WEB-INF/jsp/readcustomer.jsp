@@ -43,25 +43,23 @@
                         <table border="1" cellpadding="10">
                             <tr>
                                 <th>Customer Name</th>
-                                <th>Address</th>
                                 <th>Email</th>
                                 <th>Gender</th>
                                 <th>Contact Number</th>
+                                <th>Action</th>
                             </tr>
                             <c:forEach var="customer" items="${customers}">
                             <tr>
-                                <td>${customer.name}</td>
-                                <td>${customer.address}</td>
+                                <td>${customer.customer_name}</td>
                                 <td>${customer.email}</td>
                                 <td>${customer.gender}</td>
-                                <td>${customer.mobNumber}</td>
-                                <td><a href="/update-customer/${customer.id}">Update</a></td>
-                                <td><a href="/delete-customer/${customer.id}">Delete</a></td>
+                                <td>${customer.contact_number}</td>
+                                <td><a class="booking_action"  href="/update-customer/${customer.id}">Update</a> <a class="booking_action delete" href="/delete-customer/${customer.id}">Delete</a></td>
                             </tr>
                             </c:forEach>
                         </table>
                         <br/>
-                        <a href="/create-customer">Create Customer</a>
+                        <a class="btn_new" href="/create-customer">Create Customer</a>
         </div>
     </div>
 </div>
@@ -228,6 +226,83 @@
   }
 
 
+.page-content {
+    padding: 20px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1;
+    background: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+.page-content::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(255,255,255,.85);
+    z-index: -1;
+}
+table{
+    text-align: center;
+    border-spacing: inherit;
+    font-size: 14px;
+}
+table th{
+    background: #303f9f;
+    color: aliceblue;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+}
+table td{
+  background: #303f9f36;
+  padding: 0.5rem 2rem;
+}
+table td:last-child{
+      background: transparent;
+    padding: 3px;
+}
+table tr:hover {background-color:#f5f5f5;}
+a.booking_action {
+    background: #e8ecef;
+    color: #2b2828;
+    display: inline-block;
+    padding: 0.4rem 1.3rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+a.booking_action.delete{
+    background: #dc6161;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+a.booking_action:hover{
+    background: #c1c1c1;
+    transition: all 0.5s ease;
+}
+a.booking_action.delete:hover{
+    background: #bd2e2e;
+    transition: all 0.5s ease;
+}
+.btn_new{
+    color: #f4fbff;
+    text-decoration: none;
+    font-weight: 500;
+    background: #309f43;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+.btn_new:hover{
+    background: #146522;
+    transition: all 0.5s ease;
+}
 </style>
 
 <script type="text/javascript">

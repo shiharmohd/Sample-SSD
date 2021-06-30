@@ -31,10 +31,10 @@ public class Package {
     private double price;
 
     @Column
-    private Date start_date;
+    private String start_date;
 
     @Column
-    private Date end_date;
+    private String end_date;
 
     @Column
     private String start_location;

@@ -19,7 +19,7 @@ public class BookingServiceTest {
         Booking booking = new Booking();
         booking.setPackage_id(1);
         booking.setCustomer_id(15);
-        //booking.setBooking_date();
+        booking.setBooking_date("2021-10-23");
         booking.setPayment_reference("Cash");
         bookingService.saveBooking(booking);
     }
