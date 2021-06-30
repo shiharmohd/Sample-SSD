@@ -20,7 +20,7 @@ public class ActivityServiceTest {
         activity.setName("Roller Coaster");
         activity.setDescription("Dubai Mall");
         activity.setType("Single");
-        //activity.setActivity_date("2021-06-06");
+        activity.setActivity_date("2021-06-06");
         activity.setOptional("Single");
         activity.setPrice(15000);
         activity.setNotes("1 hour drive");

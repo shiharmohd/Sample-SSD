@@ -19,8 +19,8 @@ public class PackageServiceTest {
         aPackage.setName("Europe Trip");
         aPackage.setDescription("For this winter");
         aPackage.setPrice(150000);
-        //aPackage.setStart_date("05-11-2018");
-        //aPackage.setEnd_date("2021-06-06");
+        aPackage.setStart_date("2021-08-28");
+        aPackage.setEnd_date("2021-09-06");
         aPackage.setStart_location("Srilanka");
         aPackage.setEnd_location("England");
         aPackage.setNumber_of_nights(9);

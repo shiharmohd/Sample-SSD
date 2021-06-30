@@ -26,7 +26,7 @@ public class Booking {
     private Integer customer_id;
 
     @Column
-    private Date booking_date;
+    private String booking_date;
 
     @Column
     private String payment_reference;

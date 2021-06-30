@@ -34,7 +34,7 @@ public class Activity {
     private String type;
 
     @Column
-    private Date activity_date;
+    private String activity_date;
 
     @Column
     private String optional;

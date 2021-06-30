@@ -46,6 +46,7 @@
                                 <th>Customer</th>
                                 <th>Booking Date</th>
                                 <th>Payment Reference</th>
+                                <th>Action</th>
                             </tr>
                             <c:forEach var="booking" items="${bookings}">
                                 <tr>
@@ -53,13 +54,12 @@
                                     <td>${booking.customer_id}</td>
                                     <td>${booking.booking_date}</td>
                                     <td>${booking.payment_reference}</td>
-                                    <td><a href="/update-booking/${booking.id}">Update</a></td>
-                                    <td><a href="/delete-booking/${booking.id}">Delete</a></td>
+                                    <td><a class="booking_action"  href="/update-booking/${booking.id}">Update</a> <a class="booking_action delete" href="/delete-booking/${booking.id}">Delete</a></td>
                                 </tr>
                             </c:forEach>
                         </table>
                         <br/>
-                        <a href="/create-booking">Create Booking</a>
+                        <a class="btn_new" href="/create-booking">Create Booking</a>
         </div>
     </div>
 </div>
@@ -226,6 +226,83 @@
   }
 
 
+.page-content {
+    padding: 20px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1;
+    background: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+.page-content::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(255,255,255,.85);
+    z-index: -1;
+}
+table{
+    text-align: center;
+    border-spacing: inherit;
+    font-size: 14px;
+}
+table th{
+    background: #303f9f;
+    color: aliceblue;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+}
+table td{
+  background: #303f9f36;
+  padding: 0.5rem 2rem;
+}
+table td:last-child{
+      background: transparent;
+    padding: 3px;
+}
+table tr:hover {background-color:#f5f5f5;}
+a.booking_action {
+    background: #e8ecef;
+    color: #2b2828;
+    display: inline-block;
+    padding: 0.4rem 1.3rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+a.booking_action.delete{
+    background: #dc6161;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+a.booking_action:hover{
+    background: #c1c1c1;
+    transition: all 0.5s ease;
+}
+a.booking_action.delete:hover{
+    background: #bd2e2e;
+    transition: all 0.5s ease;
+}
+.btn_new{
+    color: #f4fbff;
+    text-decoration: none;
+    font-weight: 500;
+    background: #309f43;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+.btn_new:hover{
+    background: #146522;
+    transition: all 0.5s ease;
+}
 </style>
 
 <script type="text/javascript">
